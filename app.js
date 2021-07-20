@@ -1,9 +1,6 @@
-
 const inquirer = require("inquirer");
-const questions = require("./assets/questions");
-// const logo = require('asciiart-logo');
-// const config = require('./package.json');
-// console.log(logo(config).render());
+const questions = require("./assets/questions")
+const connection = require("./assets/connection")
 
 // Start our application
 init();
@@ -31,7 +28,7 @@ async function init() {
   }
 }
 /////////////////////////////////////////////////////////////////////////////////////
-// Edit department functions
+// Editing department functions
 async function editDepartments() {
   const { department } = await inquirer.prompt({
     name: "department",
@@ -54,7 +51,7 @@ async function editDepartments() {
   }
 };
 ///////////////////////////////////////////////
-////add department function
+////adding department function
 async function addDepartment() {
   const departmentName = await inquirer.prompt({
     name: "department",
@@ -77,7 +74,7 @@ async function addDepartment() {
     });
 }
 //////////////////////////////////////////////////
-////remove department function
+////removing department function
 async function remDepartment() {
   connection.query(
     "SELECT dept AS departments FROM department",
