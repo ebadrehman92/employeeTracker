@@ -1,9 +1,10 @@
 {
   "name": "employeetracker",
   "version": "1.0.0",
-  "description": "",
+  "description": "In this assignment we have used Node and mysql to make a database, I have connected the workbench and also the functions to work but its not working as its suppose to. here is the link to the video that shows the basic functionality.  https://drive.google.com/file/d/1isWNE0Vzqave3fDfjMbnG2GdZNNC6EzO/view",
   "main": "app.js",
   "dependencies": {
+    "console.table": "^0.10.0",
     "inquirer": "^8.1.2",
     "mysql": "^2.18.1",
     "sql": "^0.78.0",
@@ -11,7 +12,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node db/seed.sql"
   },
   "repository": {
     "type": "git",
